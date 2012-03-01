@@ -64,8 +64,10 @@ Vagrant::Config.run do |config|
   #
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
+    chef.add_recipe "git"
     chef.add_recipe "java"
     chef.add_recipe "hadoop"
+    chef.add_recipe "maven"
     # chef.add_role "web"
   
     # You may also specify custom JSON attributes:
