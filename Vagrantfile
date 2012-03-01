@@ -64,7 +64,7 @@ Vagrant::Config.run do |config|
   #
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-    chef.add_recipe "java::oracle"
+    chef.add_recipe "java"
     chef.add_recipe "hadoop"
     # chef.add_role "web"
   
