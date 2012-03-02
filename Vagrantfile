@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "base"
+  config.vm.box = "lucid32"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -30,6 +30,15 @@ Vagrant::Config.run do |config|
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
   # config.vm.forward_port 80, 8080
+  Vagrant::Config.run do |config|
+    # Forward guest port 80 to host port 5080
+    config.vm.forward_port 80, 5080
+    config.vm.forward_port 50030, 5030  #http://localhost:5030/ – web UI for MapReduce job tracker(s)
+    config.vm.forward_port 50060, 5060  #http://localhost:5060/ – web UI for task tracker(s)
+    config.vm.forward_port 50070, 5070  #http://localhost:5070/ – web UI for HDFS name node(s)
+    
+  end
+
 
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
