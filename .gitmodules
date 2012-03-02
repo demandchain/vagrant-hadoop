@@ -1,0 +1,3 @@
+[submodule "cookbooks/hoop"]
+	path = cookbooks/hoop
+	url = git@github.com:ywen/hoop-cookbook.git

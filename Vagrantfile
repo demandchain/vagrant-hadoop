@@ -68,6 +68,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "java"
     chef.add_recipe "hadoop"
     chef.add_recipe "maven"
+    chef.add_recipe "hoop"
     # chef.add_role "web"
   
     # You may also specify custom JSON attributes:
