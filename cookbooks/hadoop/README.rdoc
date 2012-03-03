@@ -1,3 +1,0 @@
-= DESCRIPTION:
-
-Hadoop chef cookbook to install hadoop from source or cloudera repository.

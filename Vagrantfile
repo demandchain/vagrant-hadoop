@@ -36,7 +36,6 @@ Vagrant::Config.run do |config|
     config.vm.forward_port 50030, 5030  #http://localhost:5030/ – web UI for MapReduce job tracker(s)
     config.vm.forward_port 50060, 5060  #http://localhost:5060/ – web UI for task tracker(s)
     config.vm.forward_port 50070, 5070  #http://localhost:5070/ – web UI for HDFS name node(s)
-    
   end
 
 
@@ -44,6 +43,7 @@ Vagrant::Config.run do |config|
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
   # config.vm.share_folder "v-data", "/vagrant_data", "../data"
+  config.vm.share_folder "hoop", "/home/vagrant/hoop", "/Users/ywen/vagrant-home"
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
@@ -73,15 +73,13 @@ Vagrant::Config.run do |config|
   #
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-    chef.add_recipe "git"
     chef.add_recipe "java"
+    chef.add_recipe "ruby-shadow"
     chef.add_recipe "hadoop"
-    chef.add_recipe "maven"
-    chef.add_recipe "hoop"
     # chef.add_role "web"
   
     # You may also specify custom JSON attributes:
-    # chef.json = { :mysql_password => "foo" }
+    # chef.json = { :maven => {:version =>" 3} }
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
