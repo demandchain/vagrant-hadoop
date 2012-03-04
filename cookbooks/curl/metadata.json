@@ -1,0 +1,39 @@
+{
+  "replacing": {
+
+  },
+  "platforms": {
+
+  },
+  "description": "Installs/Configures curl",
+  "maintainer_email": "yabawock@gmail.com",
+  "recipes": {
+    "curl::default": "Installs the curl CLI tool and library"
+  },
+  "groupings": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "version": "0.0.1",
+  "attributes": {
+
+  },
+  "conflicting": {
+
+  },
+  "license": "Apache 2.0",
+  "long_description": "= DESCRIPTION:\n\ncurl is a command line tool and library to get a file from an HTTP, HTTPS or FTP server \n\n= REQUIREMENTS:\n\nNone, this is a standalone tools\n\n= USAGE:\n\nMost often this will be used in a operating system preconfiguration or in recipes that need\nto get a file from an external server.\n\n= LICENSE and AUTHOR:\n\nAuthor:: Morton Jonuschat (<yabawock@gmail.com>)\n\nCopyright:: 2010, Morton Jonuschat\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
+  "name": "curl",
+  "providing": {
+
+  },
+  "dependencies": {
+
+  },
+  "maintainer": "Morton Jonuschat"
+}

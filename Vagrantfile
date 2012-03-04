@@ -43,7 +43,7 @@ Vagrant::Config.run do |config|
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
   # config.vm.share_folder "v-data", "/vagrant_data", "../data"
-  config.vm.share_folder "hoop", "/home/vagrant/hoop", "/Users/ywen/vagrant-home"
+  config.vm.share_folder "hoop", "/home/vargrant/hoop", "/Users/ywen/hadoop-share"
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
@@ -74,6 +74,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "java"
+    chef.add_recipe "curl"
     chef.add_recipe "ruby-shadow"
     chef.add_recipe "hadoop"
     # chef.add_role "web"
