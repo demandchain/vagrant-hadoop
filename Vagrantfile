@@ -33,6 +33,7 @@ Vagrant::Config.run do |config|
   Vagrant::Config.run do |config|
     # Forward guest port 80 to host port 5080
     config.vm.forward_port 80, 5080
+    config.vm.forward_port 8088, 50808
     config.vm.forward_port 50030, 5030  #http://localhost:5030/ – web UI for MapReduce job tracker(s)
     config.vm.forward_port 50060, 5060  #http://localhost:5060/ – web UI for task tracker(s)
     config.vm.forward_port 50070, 5070  #http://localhost:5070/ – web UI for HDFS name node(s)
@@ -76,6 +77,8 @@ Vagrant::Config.run do |config|
     chef.add_recipe "java"
     chef.add_recipe "curl"
     chef.add_recipe "ruby-shadow"
+    chef.add_recipe "git"
+    chef.add_recipe "daemonize"
     chef.add_recipe "hadoop"
     # chef.add_role "web"
   

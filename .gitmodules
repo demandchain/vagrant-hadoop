@@ -1,0 +1,3 @@
+[submodule "cookbooks/daemonize"]
+	path = cookbooks/daemonize
+	url = git@github.com:ywen/chef-daemonize.git
